@@ -1,0 +1,263 @@
+.search-bar{
+    /* border:2px solid black; */
+    margin-top: 12px;
+    height:100px;
+}
+
+.search-bar .pick-up{
+    /* border:2px solid black; */
+    height:70px;
+    border-radius: 10px;
+    border-bottom: 2px solid gray;
+}
+
+.location-logo i{
+    height:70px;
+    /* border:2px solid black; */
+    width:5%;
+    font-size: 32px;
+    text-align: center;
+    padding-top: 15px;
+    float:left;
+    --fa-animation-duration: 2s;
+}
+.location-name{
+    /* border:2px solid black; */
+    margin-left: 1rem;
+    width:45%;
+    height:70px;
+    float: left;
+    padding-top: 5px;
+    /* border-right: 5px solid gray; */
+}
+.calendar-logo{
+    
+}
+.calendar-logo i{
+    height:70px;
+    /* border:2px solid black; */
+    width:5%;
+    font-size: 32px;
+    text-align: center;
+    padding-top: 15px;
+    float:left;
+    --fa-animation-duration: 2.5s;
+}
+.pick-up-date{
+    /* border:2px solid black; */
+    margin-left: 1rem;
+    width:15%;
+    float: left;
+    padding-top: 5px;
+}
+
+.time-logo i{
+    height:70px;
+    /* border:2px solid black; */
+    width:5%;
+    font-size: 32px;
+    text-align: center;
+    padding-top: 15px;
+    float:left;
+    --fa-animation-duration: 2.5s;
+}
+.pick-up-time{
+    margin-left: 1rem;
+    width:15%;
+    float: left;
+    padding-top: 5px;
+}
+
+.search-bar .return{
+    /* border:2px solid black; */
+    height:70px;
+    border-radius: 10px;
+    border-bottom: 2px solid gray;
+}
+.return-time{
+    /* border:2px solid black; */
+    margin-left: 1rem;
+    width:25%;
+    float: left;
+    padding-top: 5px;
+}
+
+.return-date{
+    /* border:2px solid black; */
+    margin-left: 1rem;
+    width:30%;
+    float: left;
+    padding-top: 5px;
+}
+
+.search-btn{
+    /* border:2px solid black; */
+    float: left;
+    margin-left: 1rem;
+    margin-top: 5px;
+    border-radius: 10px;
+    padding:12px;
+    background-color: blue;
+}
+.search-btn i{
+    /* border:2px solid black; */
+    float:left;
+    font-size: 32px;
+    color: #fff;
+}
+@media screen and (max-width:480px) {
+    .location-logo{
+        /* display:none; */
+    }
+    .search-bar span{
+        display:none;
+    }
+    .search-bar h5{
+        font-size: 16px;
+    }
+    .search-bar i{
+        font-size: 19px;
+    }
+    .search-bar .location-name h5{
+        font-size: 14px;
+    }
+    .search-bar i{
+        padding-left: 10px;
+    }
+    .pick-up-time h5{
+        display:none;
+        width:100%;
+        border:2px solid black;
+    }
+    .pick-up .time-logo {
+        display:none;
+        
+    }
+
+    .search-btn i{
+        padding-right: 12px;
+        width:10%;
+    }
+
+    .return .return-date,.return-time,.search-btn{
+        margin-top:12px;
+    }
+
+
+}
+
+/* searchbar ends */
+
+.filters select{
+    margin-left:2rem;
+    border-radius: 10px;
+    padding:5px;
+}
+
+.clear-filter-btn{
+    margin-left: 26rem;
+}
+
+.clear-filter-btn i{
+    padding-right:5px;
+}
+
+.search-result-count{
+    margin-top: 2.5rem;
+}
+
+@media screen  and (max-width:480px){
+    .filters{
+        /* border:2px solid black; */
+        margin-top: 3rem;
+    }
+    .filters select{
+        margin-bottom: 5px;
+    }
+    .clear-filter-btn {
+        text-align: center;
+    }
+    .clear-filter-btn{
+        margin: 0;
+    }
+}
+
+/* filters ends  */
+
+.rentcar-card-container{
+    /* border:2px solid black; */
+    height: 700px;
+    display:flex;
+    /* display: block; */
+    gap:8rem;
+    flex-wrap: wrap;
+}
+.rentcar-card{
+    /* border:2px dotted black; */
+    height:500px;
+    width:25%;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.rentcar-logo-img{
+    float: left;
+}
+.rentcar-name{
+margin-top:12px;
+}
+.rentcar-name h5{
+    text-align: center;
+}
+.rentcar-company-img{
+    float:right;
+}
+
+.rentcar-img{
+    /* border:2px solid black; */
+    margin-top: 4rem;
+}
+
+.rentcar-badges span{
+    /* border:2px solid black; */
+    margin-left: 12px;
+}
+
+.rentcar-features i{
+    margin-left: 1.5rem;
+}
+
+.rentcar-payment-info{
+    /* border:2px solid black; */
+    height:80px;
+    width:90%;
+    margin-left: 1rem;
+    border-radius: 10px;
+    background-color: #b9b8b87f;
+    display: flex;
+    justify-content:space-evenly ;
+    align-items: center;
+}
+
+.tl-info{
+    /* border:2px solid black; */
+    height:90px;
+    width:90%;
+    margin-left: 1rem;
+    border-radius: 10px;
+    /* background-color: #b9b8b87f; */
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.rentcar-btn{
+    width:92%;
+    margin:0 7px 0 12px;
+}
+
+@media screen  and (max-width:480px){
+    .rentcar-card{
+        width:100%;
+    }
+}

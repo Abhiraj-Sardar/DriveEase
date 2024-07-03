@@ -1,0 +1,568 @@
+{% extends "index.html" %}
+<head>{%load static%}
+</head>
+{%block content%}
+{% if login == "null"%}
+<div class="toast fade show" style="position:absolute;right:0;z-index:1000; border:2px dotted red" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="toast-header">
+    <svg class="bd-placeholder-img rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="red"></rect></svg>
+    <strong class="me-auto">DriveEase</strong>
+    <small>Just Now</small>
+    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+  </div>
+  <div class="toast-body" style="color:red;font-size:16px;">
+    <b>User Does Not Exist !! Please Sign Up</b>
+  </div>
+</div> 
+{% endif %}
+<div class="signup-back" style="background-color:#333; height:100vh;opacity:0.7;position:absolute;width:100%;z-index:1000;display:none;justify-content:center;align-items:center;">
+  <h1><i class="fa-solid fa-xmark" style="color:#fff;font-size:32px;position:absolute;top:2rem;right:2rem;"></i></h1>
+  
+  <div class="signup-container signup-form" style="border:2px solid #fff;height:500px;width:30%;border-radius:10px;">
+    <h2 style="margin-top:4rem;text-align:center;color:#fff;">Sign Up</h2>
+    <form class="signup-form" action="AddUser/" method="post">
+      {% csrf_token %}
+      <div class="form-group" style="margin-top:2rem;text-align:center;">
+        
+        <input type="text" style="height:50px;width:70%;border-radius:5px;" id="username" name="username" placeholder="Enter Your Username" required>
+      </div>
+      <div class="form-group" style="margin-top:2rem;text-align:center;">
+        <input type="email" id="email" name="email" placeholder="Enter Your Email" style="height:50px;width:70%;border-radius:5px;" required>
+      </div>
+      <div class="form-group" style="margin-top:2rem;text-align:center;">
+        <input type="password" id="password" name="password" placeholder="Enter Your Password" style="height:50px;width:70%;border-radius:5px;" required>
+      </div>
+      <button type="submit"class="btn btn-primary" style="width:70%;margin-top:1rem;padding:12px;margin-left:4rem;">Sign Up</button>
+    </form>
+  </div>
+</div> 
+
+<div class="auth-back" style="background-color:#333; height:100vh;opacity:0.7;position:absolute;width:100%;z-index:1000;display:none;justify-content:center;align-items:center;">
+  <h1><i class="fa-solid fa-xmark login-xmark" style="color:#fff;font-size:32px;position:absolute;top:2rem;right:2rem;"></i></h1>
+  <div class="login-form" style="height:auto;width:30%; opacity:1; border:2px solid #fff; background-color:#fff;border-radius:10px; padding:25px;backdrop-filter:25px;">
+    <form action="user/" method="post">
+      {% csrf_token %}
+      <h1 class="text-center">Login</h1>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" name="uemail" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" name="upass" class="form-control" id="exampleInputPassword1" placeholder="Password">
+      </div>
+      <br>
+      <div class="form-group form-check">
+        <input type="checkbox" name="remember" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      </div>
+      <br>
+      <button type="submit" class="btn btn-primary" style="width:100%;">Login</button>
+    </form>
+  </div>
+</div>
+  <div class="container-fluid  car-theme">
+    <div class="row">
+      <div class="col-lg-6 col-12 car-theme-text">
+        <h1>
+          Rent Your Favourite Car in Easy steps
+        </h1>
+        <button class="btn ">Subscribe</button>
+        <button class="btn ">Consult</button>
+        <h6>
+          Get a Car Where Ever and When Ever you need it...<br> with out any hesitation...
+        </h6>
+      </div>
+      <div class="col-lg-6 col-12 car-theme-image">
+        <img src="{%static 'Ferrari.jpg'%}" >
+      </div>
+    </div>
+  </div>
+  
+  <!-- car theme ends -->
+  <div class="container car-logo-viewer">
+    <div class="car-logo-animation">
+      <div class="logo" id="logo1"></div>
+      <div class="logo" id="logo2"></div>
+      <div class="logo" id="logo3"></div>
+      <div class="logo" id="logo4"></div>
+      <div class="logo" id="logo5"></div>
+      <div class="logo" id="logo6"></div>
+      <div class="logo" id="logo7"></div>
+      <div class="logo" id="logo8"></div>
+      <div class="logo" id="logo9"></div>
+      <div class="logo" id="logo10"></div>
+      <div class="logo" id="logo11"></div>
+      <div class="logo" id="logo12"></div>
+                    
+    </div>
+  </div>
+
+  <!-- car-logo-viewer ends-->
+  <div class="container c1 car-inventory">
+      <div class="row">
+        <div class="col-12 car-inventory-title">
+          <h3 class="fa-beat-fade">Latest <span>Inventory</span></h3>
+        </div>
+      </div>
+      <div class="car-card">
+        <div class="car-1">
+          <div class="car-img">
+            
+          </div>
+          <div class="car-img-title">
+            <h5>Hyundai Tucson Accent</h5>
+          </div>
+          <div class="car-ratings">
+            <div class="star-1">
+
+            </div>
+          </div>
+          <div class="car-features-1">
+            <i class="fa-solid fa-chair"> <span> 6 Seats</span></i>
+            <i class="fa-solid fa-car-rear"><span> Engine</span></i>
+            <i class="fa-solid fa-gas-pump"><span> Petrol</span></i>
+          </div>
+          <br>
+          <div class="car-features-1">
+            <i class="fa-solid fa-door-open"> <span> 2 Door</span></i>
+            <i class="fa-solid fa-user"><span> 5 Person</span></i>
+            <i class="fa-solid fa-gauge-high"><span> 60 km/h</span></i>
+          </div>
+          <hr>
+          <div class="car-price">
+             <span class="fa-beat-fade">$123/Day</span>
+             <span class="btn btn-primary">Rent Car</span>
+              
+          </div>
+        </div>
+        <div class="car-1 car-2">
+          <div class="car-img">
+            
+          </div>
+          <div class="car-img-title">
+            <h5>Hyundai Tucson Accent</h5>
+          </div>
+          <div class="car-ratings">
+            <div class="star-1">
+
+            </div>
+          </div>
+          <div class="car-features-1">
+            <i class="fa-solid fa-chair"> <span> 6 Seats</span></i>
+            <i class="fa-solid fa-car-rear"><span> Engine</span></i>
+            <i class="fa-solid fa-gas-pump"><span> Petrol</span></i>
+          </div>
+          <br>
+          <div class="car-features-1">
+            <i class="fa-solid fa-door-open"> <span> 2 Door</span></i>
+            <i class="fa-solid fa-user"><span> 5 Person</span></i>
+            <i class="fa-solid fa-gauge-high"><span> 60 km/h</span></i>
+          </div>
+          <hr>
+          <div class="car-price">
+             <span class="fa-beat-fade">$123/Day</span>
+             <span class="btn btn-primary">Rent Car</span>
+              
+          </div>
+        </div>
+        <div class="car-1 car-3">
+          <div class="car-img">
+            
+          </div>
+          <div class="car-img-title">
+            <h5>Hyundai Tucson Accent</h5>
+          </div>
+          <div class="car-ratings">
+            <div class="star-1">
+
+            </div>
+          </div>
+          <div class="car-features-1">
+            <i class="fa-solid fa-chair"> <span> 6 Seats</span></i>
+            <i class="fa-solid fa-car-rear"><span> Engine</span></i>
+            <i class="fa-solid fa-gas-pump"><span> Petrol</span></i>
+          </div>
+          <br>
+          <div class="car-features-1">
+            <i class="fa-solid fa-door-open"> <span> 2 Door</span></i>
+            <i class="fa-solid fa-user"><span> 5 Person</span></i>
+            <i class="fa-solid fa-gauge-high"><span> 60 km/h</span></i>
+          </div>
+          <hr>
+          <div class="car-price">
+             <span class="fa-beat-fade">$123/Day</span>
+             <span class="btn btn-primary">Rent Car</span>
+              
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="blob b1 blob1">
+    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <path fill="#CDF5FD" d="M49.5,-44.8C60.1,-26.2,61.9,-5.8,58.9,15.9C55.9,37.5,48.1,60.6,31.3,70.9C14.5,81.3,-11.2,79.1,-32,68.4C-52.8,57.6,-68.7,38.5,-69.3,20.2C-70,1.9,-55.5,-15.4,-41.4,-34.8C-27.4,-54.2,-13.7,-75.7,2.9,-78C19.5,-80.3,38.9,-63.4,49.5,-44.8Z" transform="translate(100 100)" />
+    </svg>
+  </div>
+
+  <div class="blob b2 blob2">
+    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <path fill="#CDF5FD" d="M49.5,-44.8C60.1,-26.2,61.9,-5.8,58.9,15.9C55.9,37.5,48.1,60.6,31.3,70.9C14.5,81.3,-11.2,79.1,-32,68.4C-52.8,57.6,-68.7,38.5,-69.3,20.2C-70,1.9,-55.5,-15.4,-41.4,-34.8C-27.4,-54.2,-13.7,-75.7,2.9,-78C19.5,-80.3,38.9,-63.4,49.5,-44.8Z" transform="translate(100 100)" />
+    </svg>
+  </div>
+  
+  <div class="container c2 car-inventory">
+    <div class="car-card">
+      <div class="car-1">
+        <div class="car-img">
+          
+        </div>
+        <div class="car-img-title">
+          <h5>Hyundai Tucson Accent</h5>
+        </div>
+        <div class="car-ratings">
+          <div class="star-1">
+
+          </div>
+        </div>
+        <div class="car-features-1">
+          <i class="fa-solid fa-chair"> <span> 6 Seats</span></i>
+          <i class="fa-solid fa-car-rear"><span> Engine</span></i>
+          <i class="fa-solid fa-gas-pump"><span> Petrol</span></i>
+        </div>
+        <br>
+        <div class="car-features-1">
+          <i class="fa-solid fa-door-open"> <span> 2 Door</span></i>
+          <i class="fa-solid fa-user"><span> 5 Person</span></i>
+          <i class="fa-solid fa-gauge-high"><span> 60 km/h</span></i>
+        </div>
+        <hr>
+        <div class="car-price">
+           <span class="fa-beat-fade">$123/Day</span>
+           <span class="btn btn-primary">Rent Car</span>
+            
+        </div>
+      </div>
+      <div class="car-1 car-2">
+        <div class="car-img">
+          
+        </div>
+        <div class="car-img-title">
+          <h5>Hyundai Tucson Accent</h5>
+        </div>
+        <div class="car-ratings">
+          <div class="star-1">
+
+          </div>
+        </div>
+        <div class="car-features-1">
+          <i class="fa-solid fa-chair"> <span> 6 Seats</span></i>
+          <i class="fa-solid fa-car-rear"><span> Engine</span></i>
+          <i class="fa-solid fa-gas-pump"><span> Petrol</span></i>
+        </div>
+        <br>
+        <div class="car-features-1">
+          <i class="fa-solid fa-door-open"> <span> 2 Door</span></i>
+          <i class="fa-solid fa-user"><span> 5 Person</span></i>
+          <i class="fa-solid fa-gauge-high"><span> 60 km/h</span></i>
+        </div>
+        <hr>
+        <div class="car-price">
+           <span class="fa-beat-fade">$123/Day</span>
+           <span class="btn btn-primary">Rent Car</span>
+            
+        </div>
+      </div>
+      <div class="car-1 car-3">
+        <div class="car-img">
+          
+        </div>
+        <div class="car-img-title">
+          <h5>Hyundai Tucson Accent</h5>
+        </div>
+        <div class="car-ratings">
+          <div class="star-1">
+
+          </div>
+        </div>
+        <div class="car-features-1">
+          <i class="fa-solid fa-chair"> <span> 6 Seats</span></i>
+          <i class="fa-solid fa-car-rear"><span> Engine</span></i>
+          <i class="fa-solid fa-gas-pump"><span> Petrol</span></i>
+        </div>
+        <br>
+        <div class="car-features-1">
+          <i class="fa-solid fa-door-open"> <span> 2 Door</span></i>
+          <i class="fa-solid fa-user"><span> 5 Person</span></i>
+          <i class="fa-solid fa-gauge-high"><span> 60 km/h</span></i>
+        </div>
+        <hr>
+        <div class="car-price">
+           <span class="fa-beat-fade">$123/Day</span>
+           <span class="btn btn-primary">Rent Car</span>
+            
+        </div>
+      </div>
+    </div>
+</div>
+<!-- car-inventory-ends -->
+<br/>
+<div class="container testimonials-heading">
+  <h1>What Our <span>Customers</span> Have To Say</h1>
+  <p>Our Customers Trust Us</p>
+</div>
+
+
+<div class="container about-template" style="height:400px;
+border-radius: 10px;
+display: flex;
+align-items: center;
+background-color: aliceblue;">
+  <div class="row">
+      <h1 style="text-align: center;">Our Core Values</h1>
+      <p style="text-align: center;">DriveEase embodies these core values in every aspect of its operations.</p>
+      <div class="col-12 template" style=" display: flex;
+      gap:12px;">
+          <div class="core-value" style="padding:2rem;
+          text-align: justify;
+          border-radius: 10px;
+          background-color: rgb(240, 233, 233);">
+              <h2>Convenience</h2>
+              <p>
+                We prioritize ease of use and efficiency in our services, ensuring a hassle-free experience for our customers.
+              </p>
+            </div>
+            
+            <div class="core-value" style="padding:2rem;
+            text-align: justify;
+            border-radius: 10px;
+            background-color: rgb(240, 233, 233);">
+              <h2>Affordability</h2>
+              <p>
+                We are committed to providing competitive rental rates without compromising on the quality of our offerings.
+              </p>
+            </div>
+            
+            <div class="core-value" style="padding:2rem;
+            text-align: justify;
+            border-radius: 10px;
+            background-color: rgb(240, 233, 233);">
+              <h2>Customer Satisfaction</h2>
+              <p>
+                We strive to exceed customer expectations by delivering top-notch service and unparalleled support at every touchpoint.
+              </p>
+            </div>
+      </div>
+  </div>
+</div>
+<!-- testimonials-heading ends -->
+
+<div class="container-fluid before-footer">
+  <div class="before-footer-template">
+    <div class="before-footer-template-content">
+      <h1>Ready To Get Started ?</h1>
+      <p style="color: #fff;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, expedita totam non ipsum ab et nulla ut ipsam pariatur molestiae! Error, optio id.</p>
+      <button class="btn">Contact Us</button>
+    </div>
+    
+  </div>
+  <div class="before-footer-car">
+    
+  </div>
+  
+</div>
+<!-- before-footer ends -->
+<div class="container-fluid main-footer">
+
+</div>
+    </div>
+
+   
+{% comment %} login background {% endcomment %}
+<footer class="bg-body-tertiary text-center footer-1" >
+  <!-- Grid container -->
+  <div class="container p-4">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+
+      <!-- Twitter -->
+      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-twitter"></i
+      ></a>
+
+      <!-- Google -->
+      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-google"></i
+      ></a>
+
+      <!-- Instagram -->
+      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-instagram"></i
+      ></a>
+
+      <!-- Linkedin -->
+      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-linkedin-in"></i
+      ></a>
+
+      <!-- Github -->
+      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-github"></i
+      ></a>
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Form -->
+    <section class="">
+      <form action="">
+        <!--Grid row-->
+        <div class="row d-flex justify-content-center">
+          <!--Grid column-->
+          <div class="col-auto">
+            <p class="pt-2">
+              <strong>Sign up for our newsletter</strong>
+            </p>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-md-5 col-12">
+            <!-- Email input -->
+            <div data-mdb-input-init class="form-outline mb-4">
+              <input type="email" id="form5Example24" class="form-control" />
+              <label class="form-label" for="form5Example24">Email address</label>
+            </div>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-auto">
+            <!-- Submit button -->
+            <button data-mdb-ripple-init type="submit" class="btn btn-outline mb-4" style="border:2px solid black;">
+              Subscribe
+            </button>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </form>
+    </section>
+    <!-- Section: Form -->
+
+    <!-- Section: Text -->
+    <section class="mb-4">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
+        repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam eum
+        harum corrupti dicta, aliquam sequi voluptate quas.
+      </p>
+    </section>
+    <!-- Section: Text -->
+
+    <!-- Section: Links -->
+    <section class="">
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Links</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a class="text-body" href="#!">Link 1</a>
+            </li>
+            <li>
+              <a class="text-body" href="#!">Link 2</a>
+            </li>
+            <li>
+              <a class="text-body" href="#!">Link 3</a>
+            </li>
+            <li>
+              <a class="text-body" href="#!">Link 4</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Links</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a class="text-body" href="#!">Link 1</a>
+            </li>
+            <li>
+              <a class="text-body" href="#!">Link 2</a>
+            </li>
+            <li>
+              <a class="text-body" href="#!">Link 3</a>
+            </li>
+            <li>
+              <a class="text-body" href="#!">Link 4</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Links</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a class="text-body" href="#!">Link 1</a>
+            </li>
+            <li>
+              <a class="text-body" href="#!">Link 2</a>
+            </li>
+            <li>
+              <a class="text-body" href="#!">Link 3</a>
+            </li>
+            <li>
+              <a class="text-body" href="#!">Link 4</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Links</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a class="text-body" href="#!">Link 1</a>
+            </li>
+            <li>
+              <a class="text-body" href="#!">Link 2</a>
+            </li>
+            <li>
+              <a class="text-body" href="#!">Link 3</a>
+            </li>
+            <li>
+              <a class="text-body" href="#!">Link 4</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </section>
+    <!-- Section: Links -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2020 Copyright:
+    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+{% endblock %}

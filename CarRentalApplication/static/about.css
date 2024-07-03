@@ -1,0 +1,216 @@
+.loader {
+    /* width: fit-content; */
+    /* height: fit-content; */
+
+    height:300px;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border:2px solid black; */
+    
+  }
+  
+  .truckWrapper {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: flex-end;
+    overflow-x: hidden;
+    background-color: rgb(158, 215, 237);
+    /* border:2px solid black; */
+  }
+  /* truck upper body */
+  .truckBody {
+    width: 290px;
+    /* height: fit-content; */
+    height:180px;
+    margin-bottom: 6px;
+    animation: motion 1s linear infinite;
+  }
+  /* truck suspension animation*/
+  @keyframes motion {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(3px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  /* truck's tires */
+  .truckTires {
+    width: 250px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px 0px 15px;
+    position: absolute;
+    /* border:2px solid black; */
+    bottom: 0;
+  }
+  .truckTires svg {
+    width: 54px;
+  }
+  
+  .road {
+    width: 100%;
+    height: 1.5px;
+    background-color: #282828;
+    position: relative;
+    bottom: 0;
+    align-self: flex-end;
+    border-radius: 3px;
+  }
+  .road::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    background-color: #282828;
+    right: -50%;
+    border-radius: 3px;
+    animation: roadAnimation 1.4s linear infinite;
+    border-left: 10px solid white;
+  }
+  .road::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 100%;
+    background-color: #282828;
+    right: -65%;
+    border-radius: 3px;
+    animation: roadAnimation 1.4s linear infinite;
+    border-left: 4px solid white;
+  }
+  
+  .lampPost {
+    position: absolute;
+    bottom: 0;
+    right: 0%;
+    height: 200px;
+    animation: roadAnimation 3.4s linear infinite;
+    /* border: 2px solid #282828; */
+  }
+  
+  @keyframes roadAnimation {
+    0% {
+      transform: translateX(0px);
+    }
+    100% {
+      transform: translateX(-2050px);
+    }
+  }
+  
+
+  .about1 .about1-text div{
+    margin-left: 60px;
+  }
+
+  .about1 .about1-text div p:first-child{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 24px;
+
+    font-weight: bold;
+  }
+  .about1 .about1-text div p{
+    text-align: justify;
+  }
+
+  .about2 .about2-text div p:first-child{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 24px;
+
+    font-weight: bold;
+  }
+
+  .about2 .about2-text div p{
+    text-align: justify;
+  }
+  .about-template{
+    height:400px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    /* border:2px solid black; */
+    background-color: aliceblue;
+  }
+  .about-template .template{
+    display: flex;
+    /* border:2px solid black; */
+    gap:12px;
+    
+  }
+
+  .about-template .template .core-value{
+    /* border:2px solid black; */
+    padding:2rem;
+    text-align: justify;
+    border-radius: 10px;
+    background-color: rgb(240, 233, 233);
+  }
+
+  .loader-wheel{
+    /* border:2px solid black; */
+    display: flex;
+    align-items: center;
+  }
+  .loader2 {
+    overflow: hidden;
+    position: relative;
+    /* border:2px solid black; */
+    width:100%;
+    text-align: center;
+  }
+  
+  .wheel {
+    fill: rgb(128, 128, 128);
+    font-size: 100px;
+    width: 300px;
+    height: 300px;
+    border-radius: 6em;
+    text-align: center;
+    animation: rolling 1s linear infinite;
+  }
+  
+  #rim {
+    fill: rgb(126, 126, 126);
+  }
+  
+  #tire {
+    fill: rgb(55, 55, 55);
+  }
+  
+  .road2 {
+    position: absolute;
+    margin-top: -4px;
+    width: 100%;
+    height: 10px;
+    border-radius: 5em;
+    background-color: rgb(55, 55, 55);
+    animation: road-move 2s linear infinite;
+  }
+  
+  @keyframes rolling {
+    to {
+      transform: rotate(-360deg);
+    }
+  }
+  
+  @keyframes road-move {
+    from {
+      transform: translateX(-140%);
+    }
+  
+    to {
+      transform: translateX(100%);
+    }
+  }
+  

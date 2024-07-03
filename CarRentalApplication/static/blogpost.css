@@ -1,0 +1,109 @@
+header h1{
+    text-align: center;
+    background-color: blue;
+    color: aliceblue;
+    padding: 1rem;
+}
+
+.leftside-trending-topics{
+    /* height:100vh; */
+    /* background-color: red; */
+}
+
+.leftside-trending-topics .trending-posts,.solved-issues{
+    height:auto;
+    margin-top:1rem;
+    /* border:2px solid black; */
+    border-radius: 10px;
+    background-color: rgb(192, 187, 187);
+}
+.leftside-trending-topics .solved-issues{
+    margin-top: 5rem;
+}
+.leftside-trending-topics .trending-posts ul li:hover{
+    color:blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.leftside-trending-topics .solved-issues ul li:hover{
+    color:blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.posts{
+    /* border:2px solid black; */
+}
+
+.posts .post-actions{
+height:40px;
+/* background-color: blue; */
+}
+
+.posts .post-actions span{
+    color: blue;
+    cursor: pointer;
+}
+
+
+.all-posts .post-list{
+/* border:2px solid black; */
+/* height: 500px; */
+}
+
+.postcard{
+    /* border:2px solid black; */
+    height:355px;
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.post-header{
+    display: flex;
+    justify-content: space-between;
+    margin:12px;
+}
+
+.post-header i{
+    font-size: 24px;
+}
+
+.post-body{
+    /* border:2px solid black; */
+    height:170px;
+    overflow: hidden;
+}
+
+.post-body p{
+    text-align: justify;
+    padding:12px;
+}
+
+.post-questions{
+    /* border:2px solid black; */
+    /* height:50px; */
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 7px;
+}
+.post-questions .q1{
+    border:2px solid grey;
+    font-size: 16px;
+    font-weight: bold;
+    padding:5px;
+    border-radius: 10px;
+}
+
+.post-questions .q1:last-child{
+    font-size: 18px;
+    width:12%;
+    text-align: center;
+}
+
+.post-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap:2.5rem;
+}

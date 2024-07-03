@@ -1,0 +1,86 @@
+*{
+    margin:0;
+    padding: 0;    
+    
+}
+
+.item1{
+    margin-left: 15rem;
+}
+
+.navbar-content li{
+    margin-right: 2rem;
+}
+
+.btn1{
+    margin-left: 10rem;
+}
+
+.login-signup-btns{
+    margin-bottom: 9px;
+}
+
+.navbar .container-fluid .login-btn{
+    border: 2px solid #1375c5;
+    color: #1375c5;
+    font-weight: 400;
+}
+
+.navbar .container-fluid .signup-btn{
+    border: 2px solid #1375c5;
+    background-color: #1375c5;
+    color: #fff;
+    font-weight: 400;
+}
+
+
+/* header ends */
+
+.footer{
+    height:300px;
+    background-color: #3dc0da; 
+    /* margin-top:200vh;  */
+}
+
+.main-footer{
+    display: none;
+}
+
+@media screen and (max-width:480px) {
+    .main-footer{
+        display: block;
+        height:300px;
+        background-color: #3dc0da; 
+    }
+
+    .footer{
+        display: none;
+    }
+}
+
+.footer-car-logo{
+    height:300px;
+    /* border: 2px solid black; */
+}
+
+.footer-content-1{
+    height:300px;
+    /* border: 2px solid black; */
+    text-align: center;
+}
+
+.footer-content-1 ul li:first-child{
+    line-height: 3.5rem;
+    list-style: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+    color: #fff;
+}
+
+.footer-content-1 ul li{
+    line-height: 3rem;
+    list-style: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    color: #fff;
+}
