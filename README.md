@@ -12,6 +12,16 @@ DriveEase is a Car Rental Application that enables the user to rent or buy cars 
 cd CarRentalApplication
 ```
 
+```bash
+python manage.py runserver
+```
+
+# To Access Admin
+```json
+UserName : admin
+Password : admin
+```
+
 # Home Page
 ![](https://github.com/Abhiraj-Sardar/DriveEase/blob/master/OUTPUT/Home.png)
 ![](https://github.com/Abhiraj-Sardar/DriveEase/blob/master/OUTPUT/Footer.png)
